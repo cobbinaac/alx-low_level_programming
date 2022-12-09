@@ -4,6 +4,7 @@
  * code by bwave ict
  * Return: 0
 */
+
 int main(void)
 {
 	char a;
