@@ -2,7 +2,7 @@
 /**
  * main - Entry
  * Return: Always 0
- */
+*/
 int main(void)
 {
 	printf("size of a char: 1 byte(s)\n", sizeof(char));
