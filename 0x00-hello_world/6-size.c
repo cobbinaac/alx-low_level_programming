@@ -1,14 +1,34 @@
-#include <stdio.h>
+
+ #include <stdio.h>
+
 /**
- * main - Entry
- * Return: Always 0
-*/
+ * main - prints all possible combinations of two two-digit numbers
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	printf("size of a char: 1 byte(s)\n", sizeof(char));
-	printf("size of an int: 4 byte(s)\n", sizeof(int));
-	printf("size of a long int: 4 byte(s)\n", sizeof(long int));
-	printf("size of a long long int: 8 byte(s)\n", sizeof(long long int));
-	printf("size of a float: 4 byte(s)\n", sizeof(float));
+	int i, j;
+
+	for (i = 0; i < 100; i++)
+	{
+		for (j = 0; j < 100; j++)
+		{
+			if (i < j)
+			{
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
+				putchar(' ');
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				if (i != 98 || j != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+
+		}
+	}
+	putchar('\n');
 	return (0);
 }
